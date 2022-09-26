@@ -1,7 +1,7 @@
 const ip = document.querySelector('#note-input')
 const submit = document.querySelector('#submit')
 const ipForm = document.querySelector('#input-form')
-const viewDiv= document.querySelector('#view-notes-section')
+const viewDiv= document.querySelector('#view-notes')
 
 const noteFwd = document.querySelector('#toggle-note-fwd')
 const noteBack = document.querySelector('#toggle-note-back')
