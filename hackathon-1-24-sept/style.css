@@ -62,7 +62,7 @@ textarea {
 
 }
 
-#submit {
+#submit, #toggle-note-back, #toggle-note-fwd {
     border: 0.4rem solid #FD841F;
     border-radius: 0.75rem;
     margin: 1rem 1rem;
