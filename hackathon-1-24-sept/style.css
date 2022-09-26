@@ -9,6 +9,17 @@
 body {
     background-color: #FBF2CF;
 }
+
+@media (max-width: 320px ) {
+    
+    
+}
+
+
+@media (min-width: 600px ) {
+    
+}
+
 header {
 
 

@@ -1,5 +1,5 @@
 const ip = document.querySelector('#note-input')
-const authorIp = document.querySelector('#note-input')
+const authorIp = document.querySelector('#author-input')
 
 const submit = document.querySelector('#submit')
 const ipForm = document.querySelector('#input-form')
@@ -14,7 +14,7 @@ const displayNotes = document.querySelector('.display-notes')
 const renderList = (obj)=> {
 
 
-    console.log("obj", obj);
+
     let div= document.createElement('div');
     let para= document.createElement('p');
     let span1= document.createElement('div');
@@ -52,7 +52,7 @@ const renderList = (obj)=> {
 const renderViewList = (obj)=> {
 
 
-    console.log("obj", obj);
+
     let div= document.createElement('div');
     let para= document.createElement('p');
     let span1= document.createElement('div');
@@ -84,7 +84,7 @@ const renderViewList = (obj)=> {
     textInfoDiv.appendChild(span2);
     div.appendChild(textInfoDiv);
     div.appendChild(clipboard);
-    console.log(viewDiv)
+
     if(viewDiv.hasChildNodes){
         viewDiv.removeChild(viewDiv.firstChild);
     }
@@ -130,9 +130,6 @@ ipForm.addEventListener('submit', (e)=> {
         //localStorage.removeItem("note-list")
         localStorage.setItem("note-list", JSON.stringify(noteList))
     
-        
-        console.log("noteObj", noteObject, "noteList", noteList);
-    
         renderList(noteObject);
 
     }
@@ -143,7 +140,7 @@ ipForm.addEventListener('submit', (e)=> {
 //---------------------view notes---------------------
 
 let iter=0;
-console.log("YESSS",typeof displayNotes[iter])
+
 
 
 noteBack.addEventListener('click', (e)=> {
@@ -155,12 +152,12 @@ noteBack.addEventListener('click', (e)=> {
         renderViewList(noteList[iter])
     }
 
-    console.log("-")
+
 })
 
 noteFwd.addEventListener('click', (e)=> {
     
-    console.log("+", displayNotes.children.length, displayNotes)
+
     
     if(iter!=displayNotes.children.length-1){
         iter++;
@@ -205,7 +202,7 @@ function checkString(str){
 
 				j++;
 			}else if(str[idx]!== "*") {
-				console.log(str[idx], idx)
+
 				ans.push(str[idx]);
 		
 			}
@@ -215,6 +212,6 @@ function checkString(str){
 	
 		
 	})
-	console.log(ans.join(""))
+
 	return ans.join("")
 }
