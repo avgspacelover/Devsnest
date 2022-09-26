@@ -82,8 +82,9 @@ const renderViewList = (obj)=> {
     textInfoDiv.appendChild(span2);
     div.appendChild(textInfoDiv);
     div.appendChild(clipboard);
+    console.log(viewDiv)
     if(viewDiv.hasChildNodes){
-        viewDiv.removeChild();
+        viewDiv.removeChild(viewDiv.firstChild);
     }
     viewDiv.appendChild(div);
 
@@ -158,13 +159,13 @@ noteBack.addEventListener('click', (e)=> {
 
 noteFwd.addEventListener('click', (e)=> {
     
-    console.log("+")
+    console.log("+", displayNotes.children.length, displayNotes)
     
-    if(iter!=displayNotes.length-1){
+    if(iter!=displayNotes.children.length-1){
         iter++;
         renderViewList(noteList[iter])
 
-    }else if(iter == displayNotes.length-1){
+    }else if(iter == displayNotes.children.length-1){
         iter=0;
         renderViewList(noteList[iter])
 
