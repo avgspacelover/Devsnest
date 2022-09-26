@@ -21,7 +21,7 @@ const renderList = (obj)=> {
 
     let clipboard= document.createElement('button');
     
-    para.innerText = obj.text;
+    para.innerHTML = checkString(obj.text);
     para.contentEditable= "true";
     span1.innerText =  `By ${obj.Author}`  
     span2.innerText =  obj.date 
@@ -59,7 +59,7 @@ const renderViewList = (obj)=> {
 
     let clipboard= document.createElement('button');
     
-    para.innerText = obj.text;
+    para.innerHTML = checkString(obj.text);
     para.contentEditable= "true";
     span1.innerText =  `By ${obj.Author}`  
     span2.innerText =  obj.date 
@@ -173,4 +173,47 @@ noteFwd.addEventListener('click', (e)=> {
 })
 
 
+function checkString(str){
+	let ans= [];
+	let i=1, j=1;
+	Array.from(str).map((item,idx)=> {
+	
+			
+			if(str[idx]=== "*" && str[idx+1]!=="*" && str[idx-1]!=="*" && i%2==1){
 
+				ans.push("<i>");
+
+				i++;
+			}else if(str[idx]=== "*" && str[idx+1]!=="*" && str[idx-1]!=="*" && i%2==0){
+
+				
+				ans.push("</i>");
+				//idx++;
+	
+				i++
+			}else if(str[idx]=== "*" && str[idx-1]==="*" && j%2==1){
+	
+				
+				ans.push("<b>");
+
+
+				j++;
+			}else if(str[idx]=== "*" && str[idx-1]==="*" && j%2==0){
+				ans.push("</b>");
+
+
+				j++;
+			}else if(str[idx]!== "*") {
+				console.log(str[idx], idx)
+				ans.push(str[idx]);
+		
+			}
+	
+
+		
+	
+		
+	})
+	console.log(ans.join(""))
+	return ans.join("")
+}

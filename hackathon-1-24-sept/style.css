@@ -84,7 +84,7 @@ textarea {
 
 .display-notes {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
 
 
 }
@@ -122,4 +122,11 @@ textarea {
     margin-bottom: 0.1rem;
     position: absolute;
     bottom: 1rem;
+}
+
+#view-notes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
