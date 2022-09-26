@@ -47,7 +47,47 @@ const renderList = (obj)=> {
     displayNotes.appendChild(div);
 
 }
+const renderViewList = (obj)=> {
 
+
+    console.log("obj", obj);
+    let div= document.createElement('div');
+    let para= document.createElement('p');
+    let span1= document.createElement('div');
+    let span2= document.createElement('div');
+    let textInfoDiv= document.createElement('div');
+
+    let clipboard= document.createElement('button');
+    
+    para.innerText = obj.text;
+    para.contentEditable= "true";
+    span1.innerText =  `By ${obj.Author}`  
+    span2.innerText =  obj.date 
+
+    clipboard.innerText="📋";
+    clipboard.addEventListener('click', (e)=> {
+        navigator.clipboard.writeText(para.innerText)
+    })
+
+    div.id= "note-container-2"
+    textInfoDiv.id="note-info-2"
+    para.id= "note-text-2"
+    span1.id= "date-text-2"
+    span2.id= "author-text-2"
+    clipboard.id= "cc-btn-2"
+
+    span2.style.fontWeight= "800"
+    div.appendChild(para);
+    textInfoDiv.appendChild(span1);
+    textInfoDiv.appendChild(span2);
+    div.appendChild(textInfoDiv);
+    div.appendChild(clipboard);
+    if(viewDiv.hasChildNodes){
+        viewDiv.removeChild();
+    }
+    viewDiv.appendChild(div);
+
+}
 
 let noteList = [];
 
@@ -112,9 +152,14 @@ noteBack.addEventListener('click', (e)=> {
         iter= noteList.length-1;
         renderViewList(noteList[iter])
     }
+
+    console.log("-")
 })
 
 noteFwd.addEventListener('click', (e)=> {
+    
+    console.log("+")
+    
     if(iter!=displayNotes.length-1){
         iter++;
         renderViewList(noteList[iter])
@@ -128,42 +173,3 @@ noteFwd.addEventListener('click', (e)=> {
 
 
 
-const renderViewList = (obj)=> {
-
-
-    console.log("obj", obj);
-    let div= document.createElement('div');
-    let para= document.createElement('p');
-    let span1= document.createElement('div');
-    let span2= document.createElement('div');
-    let textInfoDiv= document.createElement('div');
-
-    let clipboard= document.createElement('button');
-    
-    para.innerText = obj.text;
-    para.contentEditable= "true";
-    span1.innerText =  `By ${obj.Author}`  
-    span2.innerText =  obj.date 
-
-    clipboard.innerText="📋";
-    clipboard.addEventListener('click', (e)=> {
-        navigator.clipboard.writeText(para.innerText)
-    })
-
-    div.id= "note-container-2"
-    textInfoDiv.id="note-info-2"
-    para.id= "note-text-2"
-    span1.id= "date-text-2"
-    span2.id= "author-text-2"
-    clipboard.id= "cc-btn-2"
-
-    span2.style.fontWeight= "800"
-    div.appendChild(para);
-    textInfoDiv.appendChild(span1);
-    textInfoDiv.appendChild(span2);
-    div.appendChild(textInfoDiv);
-    div.appendChild(clipboard);
-    viewDiv.removeChild();
-    viewDiv.appendChild(div);
-
-}
