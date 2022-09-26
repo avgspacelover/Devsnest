@@ -36,11 +36,11 @@ const renderList = (obj)=> {
     div.id= "note-container"
     textInfoDiv.id="note-info"
     para.id= "note-text"
-    span1.id= "date-text"
-    span2.id= "author-text"
+    span1.id= "author-text"
+    span2.id= "date-text"
     clipboard.id= "cc-btn"
 
-    span2.style.fontWeight= "800"
+    span1.style.fontWeight= "800"
     div.appendChild(para);
     textInfoDiv.appendChild(span1);
     textInfoDiv.appendChild(span2);
@@ -74,11 +74,11 @@ const renderViewList = (obj)=> {
     div.id= "note-container-2"
     textInfoDiv.id="note-info-2"
     para.id= "note-text-2"
-    span1.id= "date-text-2"
-    span2.id= "author-text-2"
+    span1.id= "author-text-2"
+    span2.id= "date-text-2"
     clipboard.id= "cc-btn-2"
 
-    span2.style.fontWeight= "800"
+    span1.style.fontWeight= "800"
     div.appendChild(para);
     textInfoDiv.appendChild(span1);
     textInfoDiv.appendChild(span2);
