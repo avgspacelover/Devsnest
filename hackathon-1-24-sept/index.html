@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    
+    <link href="./style.css" rel="stylesheet">
+
     <meta
       name="description"
       content="notepad"
@@ -16,22 +18,38 @@
   <body>
     <header>
         <h1>Notepad</h1>
-        <h4>Antariksh</h4>
-    </header>
+      <div>
+        <h4>
+          <a  href="https://liinks.co/antariksh">Antariksh</a>
+        </h4>
+      </div>
+   </header>
     <main>
-        <section>
+        <section id="form-section">
             <form  action="/" method="POST"  id="input-form">
-                <textarea id="input" type="text" placeholder="Create a Note....">
+  
+              
+              <textarea id="note-input" type="text" placeholder="Create a Note....">
                 </textarea>
+              <input id="author-input" type="text" placeholder="Create a Note....">
+
     
-                <button id="submit" type="submit">submit </button>
+                <button id="submit" type="submit">Add Note </button>
             </form>
 
         </section>
-        <section id="display-notes-section">
-            <div id="display-notes" >
+        <section id="view-notes-section">
+          <div id="view-notes">
 
-            </div>
+          </div>
+
+          <button id="toggle-note-back">Previous</button>
+          <button id="toggle-note-fwd">Next</button>
+
+        </section>
+        <section id="display-notes-section">
+            <div class="display-notes" >
+              
             
             <!-- render in JS -->
 

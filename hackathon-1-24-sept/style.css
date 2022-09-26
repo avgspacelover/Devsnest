@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    /* margin-left: 2rem; */
+    /* margin-right: 4rem; */
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FBF2CF;
+}
+header {
+
+
+    background-color: #562B08;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1  {
+
+    color: beige;
+}
+
+header> div {
+    background-color: #FD841F;
+    width: 100%;
+    margin-bottom:0;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+h4 >a {
+    color: #FBF2CF;
+    text-decoration: none;
+}
+
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+textarea {
+
+    width: 20rem;
+    padding: 0rem;
+    margin: 2rem 0;
+    height: 25rem;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0.5rem solid #FD841F;
+    border-radius: 0.2rem;
+    margin: 1rem 1rem;
+    padding: 4rem 4rem 1rem 4rem;
+    color: #FBF2CF;
+    background-color: #3A5BA0 ;
+
+
+}
+
+#submit {
+    border: 0.4rem solid #FD841F;
+    border-radius: 0.75rem;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    color: #FBF2CF;
+    background-color: #0F3460 ;
+    font-weight: 700;
+
+
+}
+
+#display-notes-section {
+    margin-top: 3rem;
+    display: grid;
+    grid-area: 3/3;
+
+
+}
+
+.display-notes {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+
+}
+
+#note-container {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;  
+
+    border: 0.5rem solid #FD841F;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0.5rem;
+    padding: 2rem 2rem 1rem 2rem;
+    color: #FBF2CF;
+    background-color: #562B08;
+    position: relative;
+
+
+}
+
+#note-text {
+    width: 16rem;
+    text-align: justify;
+    font-size: 16px;
+
+}
+
+#note-info {
+    margin: 3rem 0;
+}
+
+#cc-btn {
+    align-self:flex-end;
+    margin-bottom: 0.1rem;
+    position: absolute;
+    bottom: 1rem;
+}
