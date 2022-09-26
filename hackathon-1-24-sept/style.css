@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 * {
     font-family: 'Montserrat', sans-serif;
     /* margin-left: 2rem; */
@@ -37,6 +37,33 @@ h4 >a {
     text-decoration: none;
 }
 
+#view-form-sect {
+    display: flex;
+    flex-direction: row;
+    /* align-items: space-around; */
+    justify-content: space-around;
+}
+
+#form-header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    color: #562B08;
+    margin-top: 1rem;
+}
+h2 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+#view-header {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    color: #562B08;
+    justify-content: flex-start;
+}
+
 
 #input-form {
     display: flex;
@@ -46,20 +73,42 @@ h4 >a {
 }
 textarea {
 
-    width: 20rem;
+    width: 30rem;
     padding: 0rem;
     margin: 2rem 0;
     height: 25rem;
     font-size: 16px;
     font-weight: 700;
-    border: 0.5rem solid #FD841F;
-    border-radius: 0.2rem;
+    border: 0.75rem solid #FD841F;
+    border-radius: 1.75rem;
     margin: 1rem 1rem;
     padding: 4rem 4rem 1rem 4rem;
     color: #FBF2CF;
     background-color: #3A5BA0 ;
 
 
+}
+input {
+
+    width: 10rem;
+    padding: 0rem;
+    margin: 2rem 0;
+    height: 4rem;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0.25rem solid #FD841F;
+    border-radius: 0.5rem;
+    margin: 1rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: #FBF2CF;
+    background-color: #3A5BA0 ;
+
+
+}
+
+::placeholder {
+    color: #FBF2CF;
+    opacity: 1;
 }
 
 #submit, #toggle-note-back, #toggle-note-fwd {
@@ -96,7 +145,7 @@ textarea {
     justify-content: center;  
 
     border: 0.5rem solid #FD841F;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     margin: 0.5rem 0.5rem;
     padding: 2rem 2rem 1rem 2rem;
     color: #FBF2CF;
@@ -128,5 +177,9 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+#view-notes {
+    margin-top: 8rem;
 }

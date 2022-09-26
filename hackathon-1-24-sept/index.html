@@ -25,28 +25,46 @@
       </div>
    </header>
     <main>
-        <section id="form-section">
-            <form  action="/" method="POST"  id="input-form">
-  
-              
-              <textarea id="note-input" type="text" placeholder="Create a Note....">
-                </textarea>
-              <input id="author-input" type="text" placeholder="Create a Note....">
-
+        <section id="view-form-sect">
+          <section id="form-section">
+            <div id="form-header">
+              <h2>
+                Create Notes
+              </h2>
+              <h4>
+                Include text between "*" to <i>italicize</i> and "**" to <b>emphasize(bold)</b>
+              </h4>
+            </div>
+              <form  action="/" method="POST"  id="input-form">
     
-                <button id="submit" type="submit">Add Note </button>
-            </form>
+                
+                <textarea id="note-input" type="text" placeholder="Create a Note....">
+                  </textarea>
+                <input id="author-input" type="text" placeholder="Author Name">
 
-        </section>
-        <section id="view-notes-section">
-          <div id="view-notes">
+      
+                  <button id="submit" type="submit">Add Note </button>
+              </form>
 
-          </div>
-          <div>
-            <button id="toggle-note-back">Previous</button>
-            <button id="toggle-note-fwd">Next</button>
-          </div>
+          </section>
+          <section id="view-notes-section">
+            <div id="view-header">
+              <h2>
+                Toggle Notes
+              </h2>
+             
+            </div>
+
+            <div id="view-notes">
+
+            </div>
+            <div>
+              <button id="toggle-note-back">Previous</button>
+              <button id="toggle-note-fwd">Next</button>
+            </div>
+          </section>
         </section>
+       
         <section id="display-notes-section">
             <div class="display-notes" >
               

@@ -1,4 +1,6 @@
 const ip = document.querySelector('#note-input')
+const authorIp = document.querySelector('#note-input')
+
 const submit = document.querySelector('#submit')
 const ipForm = document.querySelector('#input-form')
 const viewDiv= document.querySelector('#view-notes')
@@ -22,7 +24,7 @@ const renderList = (obj)=> {
     let clipboard= document.createElement('button');
     
     para.innerHTML = checkString(obj.text);
-    para.contentEditable= "true";
+    //para.contentEditable= "true";
     span1.innerText =  `By ${obj.Author}`  
     span2.innerText =  obj.date 
 
@@ -60,7 +62,7 @@ const renderViewList = (obj)=> {
     let clipboard= document.createElement('button');
     
     para.innerHTML = checkString(obj.text);
-    para.contentEditable= "true";
+    //para.contentEditable= "true";
     span1.innerText =  `By ${obj.Author}`  
     span2.innerText =  obj.date 
 
@@ -108,35 +110,34 @@ if(savedData){
 
 ipForm.addEventListener('submit', (e)=> {
     e.preventDefault()
-    let words = ip.value;
-    let todayDate= new Date();
-    let formattedDate = todayDate.getHours() + ":" +todayDate.getMinutes() + " "+ todayDate.toDateString(); 
-    const noteObject = {
-        text: "", 
-        date: formattedDate,
-        Author: "Antariksh"
-    }
 
-    noteObject.text = words;
-    noteList.push(noteObject)
-    ip.value=""
+    if(ip.value.length>0){
 
-    //localStorage.removeItem("note-list")
-    localStorage.setItem("note-list", JSON.stringify(noteList))
-
+        let words = ip.value;
+        let authorName= authorIp.value;
+        let todayDate= new Date();
+        let formattedDate = todayDate.getHours() + ":" +todayDate.getMinutes() + " "+ todayDate.toDateString(); 
+        const noteObject = {
+            text: "", 
+            date: formattedDate,
+            Author: authorName.length>0 ? authorName : "Unknown"
+        }
     
-    console.log("noteObj", noteObject, "noteList", noteList);
+        noteObject.text = words;
+        noteList.push(noteObject)
+        ip.value=""
+    
+        //localStorage.removeItem("note-list")
+        localStorage.setItem("note-list", JSON.stringify(noteList))
+    
+        
+        console.log("noteObj", noteObject, "noteList", noteList);
+    
+        renderList(noteObject);
 
-    renderList(noteObject);
+    }
+   
 })
-
-// submit.addEventListener('click', (event)=> {
-
-//     // let words = ip.value;
-//     // console.log(words)
-
-// })
-
 
 
 //---------------------view notes---------------------
